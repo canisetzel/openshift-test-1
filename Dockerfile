@@ -12,7 +12,9 @@ RUN mkdir /app
 WORKDIR /app
 
 #copy the app code to image working directory
-COPY app /app
+COPY ./app /app
+
+RUN cd /app
 
 #let pip install required packages
 RUN pip install -r ./requirements.txt
